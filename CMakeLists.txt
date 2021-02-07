@@ -12,13 +12,13 @@ find_package(OpenGL REQUIRED)
 
 # Include directories
 include_directories(
-    libs/glfw/include
-    libs/glad/include
+    lib/glfw/include
+    lib/glad/include
     modules
 )
 
 # Add libraries
-add_library(glad libs/glad/src/glad.c)
+add_library(glad lib/glad/src/glad.c)
 
 # Add subdirs
 add_subdirectory(lib/glfw)
