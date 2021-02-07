@@ -35,4 +35,4 @@
 build/
 
 # IDE specific diretories
-.vsode/
+.vscode/
