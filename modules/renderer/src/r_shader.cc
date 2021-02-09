@@ -10,8 +10,7 @@ Shadowheart::Renderer::Shader::Shader(const std::string& vertexShaderPath,
     vertShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
     fragShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
 
-    try
-    {
+    try {
         // Open files and create a stringstream
         vertShaderFile.open(vertexShaderPath);
         fragShaderFile.open(fragmentShaderPath);
@@ -28,9 +27,8 @@ Shadowheart::Renderer::Shader::Shader(const std::string& vertexShaderPath,
         // Dump streams into strings
         vertCode = vertShaderStream.str();
         fragCode = fragShaderStream.str();
-    }
-    catch(std::ifstream::failure& exception)
-    {
+
+    } catch(std::ifstream::failure& exception) {
         std::cout << "ERROR::RENDERER::SHADER::FILE_NOT_SUCCESSFULLY_READ" << std::endl;
     }
 
@@ -53,16 +51,14 @@ Shadowheart::Renderer::Shader::Shader(const std::string& vertexShaderPath,
     // Compile the shaders and check for compilation errors
     glCompileShader(vertShader);
     glGetShaderiv(vertShader, GL_COMPILE_STATUS, &success);
-    if(!success)
-    {
+    if(!success) {
         glGetShaderInfoLog(vertShader, 512, nullptr, infoLog);
         std::cout << "ERROR::RENDERER::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
     }
 
     glCompileShader(fragShader);
     glGetShaderiv(fragShader, GL_COMPILE_STATUS, &success);
-    if(!success)
-    {
+    if(!success) {
         glGetShaderInfoLog(fragShader, 512, nullptr, infoLog);
         std::cout << "ERROR::RENDERER::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
     }
@@ -74,8 +70,7 @@ Shadowheart::Renderer::Shader::Shader(const std::string& vertexShaderPath,
     glLinkProgram(shaderProg);
 
     glGetProgramiv(shaderProg, GL_LINK_STATUS, &success);
-    if(!success)
-    {
+    if(!success) {
         glGetProgramInfoLog(shaderProg, 512, nullptr, infoLog);
         std::cout << "ERROR::RENDERER::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
     }
