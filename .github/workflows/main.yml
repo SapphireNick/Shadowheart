@@ -21,7 +21,6 @@ jobs:
       - name: Run clang-format style check for C/C++
         uses: DoozyX/clang-format-lint-action@v0.11
         with:
-          source: './modules/*'
-          exclude: './lib'
+          source: '.'
           extensions: 'h,c,hh,cc,hpp,cpp'
           clangFormatVersion: '11'
