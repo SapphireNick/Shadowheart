@@ -24,4 +24,4 @@ jobs:
           source: '.'
           exclude: './lib'
           extensions: 'h,c,hh,cc,hpp,cpp'
-          clang-format-version: '11'
+          clangFormatVersion: '11'
