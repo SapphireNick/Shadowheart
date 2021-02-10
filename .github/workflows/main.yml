@@ -22,6 +22,6 @@ jobs:
         uses: DoozyX/clang-format-lint-action@v0.11
         with:
           source: '.'
-          exclue: './lib'
+          exclude: './lib'
           extensions: 'h,c,hh,cc,hpp,cpp'
           clang-format-version: '11'
