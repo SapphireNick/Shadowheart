@@ -19,8 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run clang-format style check for C/C++
-        uses: DoozyX/clang-format-lint-action@v0.11
+        uses: jidicula/clang-format-action@v3.1.0
         with:
-          clangFormatVersion: '11'
-          exclude: './lib'
-          style: 'file'
+          clang-format-version: '11'
+          check-path: './modules
