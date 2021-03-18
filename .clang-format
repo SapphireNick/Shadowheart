@@ -1,4 +1,6 @@
 BasedOnStyle: Google
 
-DerivePointerAlignment: false
-PointerAlignment: Left
+DerivePointerAlignment: true
+PointerAlignment: Right
+
+AccessModifierOffset: -2

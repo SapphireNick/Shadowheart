@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 # Setup project
-project(Shadowheart LANGUAGES CXX C)
+project(Shadowheart::Renderer LANGUAGES CXX C)
 
 # Set flags and cxx standard
 set(CMAKE_CXX_STANDARD 17)
@@ -12,17 +12,16 @@ find_package(OpenGL REQUIRED)
 
 # Include directories
 include_directories(
-    lib/glfw/include
-    lib/glad/include
-    modules
+    ../lib/glfw/include
+    ../lib/glad/include
+    ../modules
+    ./include
 )
 
 # Add libraries
-add_library(glad lib/glad/src/glad.c)
+add_library(r_shader src/r_shader.cc)
 
 # Add subdirs
-add_subdirectory(lib/glfw)
-add_subdirectory(modules/renderer)
 
 # Executables / Tests
 # Linking
