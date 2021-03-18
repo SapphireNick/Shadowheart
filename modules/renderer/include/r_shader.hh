@@ -17,8 +17,8 @@ private:
 public:
   /**
    * @brief Takes shader-paths, compiles and links shaders into a shader-program
-   * @param: const std::string& vertexShaderPath
-   *       : const std::string& fragmentShaderPath
+   * @param: const std::string &vertexShaderPath
+   *       : const std::string &fragmentShaderPath
    * @return: void
    */
   Shader(const std::string &vertexShaderPath,
