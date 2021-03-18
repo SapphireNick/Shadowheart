@@ -18,7 +18,6 @@ namespace Renderer {
  * parsed and compiled, linked to a new shaderprogram, which will be the id
  * of the Object, and compiled. Convienence functions ease to need to change
  * global shader variables and starting the use of the desired program.
- *
  */
 class Shader {
 private:
