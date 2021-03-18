@@ -10,6 +10,15 @@
 
 namespace Shadowheart {
 namespace Renderer {
+/**
+ * Class to ease use of shaders
+ *
+ * This class is used to parse shaders and compile them into a functioning
+ * shaderprogram for use in the actual rendering steps. The files will get
+ * parsed and compiled, linked to a new shaderprogram, which will be the id
+ * of the Object, and compiled. Convienence functions ease to need to change
+ * global shader variables and starting the use of the desired program.
+ */
 class Shader {
 private:
   unsigned int _id;
