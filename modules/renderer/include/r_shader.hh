@@ -1,20 +1,20 @@
 #ifndef R_SHADER_HH
 #define R_SHADER_HH
 
-#include "glad/glad.h"
-
 #include <fstream>
 #include <iostream>
 #include <sstream>
 #include <string>
 
+#include "glad/glad.h"
+
 namespace Shadowheart {
 namespace Renderer {
 class Shader {
-private:
+ private:
   unsigned int _id;
 
-public:
+ public:
   /**
    * @brief Takes shader-paths, compiles and links shaders into a shader-program
    * @param: const std::string &vertexShaderPath
@@ -41,7 +41,7 @@ public:
   // TODO: #5 convenience functions to access / modify uniforms
 
 }; /* Shader */
-} // namespace Renderer
-} // namespace Shadowheart
+}  // namespace Renderer
+}  // namespace Shadowheart
 
-#endif // R_SHADER_HH
+#endif  // R_SHADER_HH
