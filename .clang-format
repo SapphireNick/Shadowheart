@@ -2,3 +2,5 @@ BasedOnStyle: Google
 
 DerivePointerAlignment: true
 PointerAlignment: Right
+
+AccessModifierOffset: -2

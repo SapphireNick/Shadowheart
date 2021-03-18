@@ -11,10 +11,10 @@
 namespace Shadowheart {
 namespace Renderer {
 class Shader {
- private:
+private:
   unsigned int _id;
 
- public:
+public:
   /**
    * @brief Takes shader-paths, compiles and links shaders into a shader-program
    * @param: const std::string &vertexShaderPath
