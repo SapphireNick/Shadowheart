@@ -22,19 +22,19 @@ private:
 
 public:
   /**
-  * @brief constuctor defaults to {0f, 0f}
-  * @param: const float &x = 0
-  *       : const float &y = 0
-  * @return: 
-  */
+   * @brief constuctor defaults to {0f, 0f}
+   * @param: const float &x = 0
+   *       : const float &y = 0
+   * @return:
+   */
   vec2(const float &x = 0, const float &y = 0);
 
   /**
-  * @brief access element i
-  * @param: const int &i
-  * @return: float&
-  */
-  float& operator[](const int &i);
+   * @brief access element i
+   * @param: const int &i
+   * @return: float&
+   */
+  float &operator[](const int &i);
 
   // TODO operator overloading
 }; /* vec2 */
@@ -50,20 +50,20 @@ private:
 
 public:
   /**
-  * @brief constuctor defaults to {0f, 0f, 0f}
-  * @param: const float &x = 0
-  *       : const float &y = 0
-  *       : const float &z = 0
-  * @return: 
-  */
+   * @brief constuctor defaults to {0f, 0f, 0f}
+   * @param: const float &x = 0
+   *       : const float &y = 0
+   *       : const float &z = 0
+   * @return:
+   */
   vec3(const float &x = 0, const float &y = 0, const float &z = 0);
 
   /**
-  * @brief access element i
-  * @param: const int &i
-  * @return: float&
-  */
-  float& operator[](const int &i);
+   * @brief access element i
+   * @param: const int &i
+   * @return: float&
+   */
+  float &operator[](const int &i);
 
   // TODO operator overloading
 }; /* vec3 */
@@ -79,21 +79,22 @@ private:
 
 public:
   /**
-  * @brief constuctor defaults to {0f, 0f}
-  * @param: const float &x = 0
-  *       : const float &y = 0
-  *       : const float &z = 0
-  *       : const float &w = 0
-  * @return: 
-  */
-  vec4(const float &x = 0, const float &y = 0, const float &z = 0, const float &w = 0);
+   * @brief constuctor defaults to {0f, 0f}
+   * @param: const float &x = 0
+   *       : const float &y = 0
+   *       : const float &z = 0
+   *       : const float &w = 0
+   * @return:
+   */
+  vec4(const float &x = 0, const float &y = 0, const float &z = 0,
+       const float &w = 0);
 
   /**
-  * @brief access element i
-  * @param: const int &i
-  * @return: float&
-  */
-  float& operator[](const int &i);
+   * @brief access element i
+   * @param: const int &i
+   * @return: float&
+   */
+  float &operator[](const int &i);
 
   // TODO operator overloading
 }; /* vec4 */
@@ -116,19 +117,19 @@ private:
 
 public:
   /**
-  * @brief constuctor defaults to {0f, 0f}
-  * @param: const int &x = 0
-  *       : const int &y = 0
-  * @return: 
-  */
+   * @brief constuctor defaults to {0f, 0f}
+   * @param: const int &x = 0
+   *       : const int &y = 0
+   * @return:
+   */
   ivec2(const int &x = 0, const int &y = 0);
 
   /**
-  * @brief access element i
-  * @param: const int &i
-  * @return: int&
-  */
-  int& operator[](const int &i);
+   * @brief access element i
+   * @param: const int &i
+   * @return: int&
+   */
+  int &operator[](const int &i);
 
   // TODO operator overloading
 }; /* ivec2 */
@@ -144,20 +145,20 @@ private:
 
 public:
   /**
-  * @brief constuctor defaults to {0f, 0f, 0f}
-  * @param: const int &x = 0
-  *       : const int &y = 0
-  *       : const int &z = 0
-  * @return: 
-  */
+   * @brief constuctor defaults to {0f, 0f, 0f}
+   * @param: const int &x = 0
+   *       : const int &y = 0
+   *       : const int &z = 0
+   * @return:
+   */
   ivec3(const int &x = 0, const int &y = 0, const int &z = 0);
 
   /**
-  * @brief access element i
-  * @param: const int &i
-  * @return: int&
-  */
-  int& operator[](const int &i);
+   * @brief access element i
+   * @param: const int &i
+   * @return: int&
+   */
+  int &operator[](const int &i);
 
   // TODO operator overloading
 }; /* ivec3 */
@@ -173,21 +174,21 @@ private:
 
 public:
   /**
-  * @brief constuctor defaults to {0f, 0f}
-  * @param: const int &x = 0
-  *       : const int &y = 0
-  *       : const int &z = 0
-  *       : const int &w = 0
-  * @return: 
-  */
+   * @brief constuctor defaults to {0f, 0f}
+   * @param: const int &x = 0
+   *       : const int &y = 0
+   *       : const int &z = 0
+   *       : const int &w = 0
+   * @return:
+   */
   ivec4(const int &x = 0, const int &y = 0, const int &z = 0, const int &w = 0);
 
   /**
-  * @brief access element i
-  * @param: const int &i
-  * @return: int&
-  */
-  int& operator[](const int &i);
+   * @brief access element i
+   * @param: const int &i
+   * @return: int&
+   */
+  int &operator[](const int &i);
 
   // TODO operator overloading
 }; /* ivec4 */
