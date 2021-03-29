@@ -7,29 +7,9 @@ namespace Math {
 /**
  * 1D float vector
  *
- * TODO detailed description
+ * alias for float
  */
-struct vec1 {
-private:
-  float _v[1];
-
-public:
-  /**
-  * @brief constuctor defaults to {0f}
-  * @param: const float &x = 0
-  * @return: 
-  */
-  vec1(const float &x = 0);
-
-  /**
-  * @brief access element i
-  * @param: const int &i
-  * @return: float&
-  */
-  float& operator[](const int &i);
-
-  // TODO operator overloading
-}; /* vec1 */
+using vec1 =float;
 
 /**
  * 2D float vector
@@ -119,34 +99,14 @@ public:
 }; /* vec4 */
 
 /**
- * 1D int ivector
+ * 1D int vector
  *
- * TODO detailed description
+ * alias for int
  */
-struct ivec1 {
-private:
-  int _v[1];
-
-public:
-  /**
-  * @brief constuctor defaults to {0f}
-  * @param: const int &x = 0
-  * @return: 
-  */
-  ivec1(const int &x = 0);
-
-  /**
-  * @brief access element i
-  * @param: const int &i
-  * @return: int&
-  */
-  int& operator[](const int &i);
-
-  // TODO operator overloading
-}; /* ivec1 */
+using ivec1 = int;
 
 /**
- * 2D int ivector
+ * 2D int vector
  *
  * TODO detailed description
  */
@@ -174,7 +134,7 @@ public:
 }; /* ivec2 */
 
 /**
- * 3D int ivector
+ * 3D int vector
  *
  * TODO detailed description
  */
@@ -203,7 +163,7 @@ public:
 }; /* ivec3 */
 
 /**
- * 4D int ivector
+ * 4D int vector
  *
  * TODO detailed description
  */
