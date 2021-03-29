@@ -38,7 +38,7 @@ public:
 
   /**
   * @brief implicit conversion to float*
-  * @param: param
+  * @param: 
   */
   operator float*();
 
@@ -73,7 +73,7 @@ public:
 
   /**
   * @brief implicit conversion to float*
-  * @param: param
+  * @param: 
   */
   operator float*();
 
@@ -110,7 +110,7 @@ public:
 
   /**
   * @brief implicit conversion to float*
-  * @param: param
+  * @param: 
   */
   operator float*();
 
@@ -151,7 +151,7 @@ public:
 
   /**
   * @brief implicit conversion to int*
-  * @param: param
+  * @param: 
   */
   operator int*();
 
@@ -186,7 +186,7 @@ public:
 
   /**
   * @brief implicit conversion to int*
-  * @param: param
+  * @param: 
   */
   operator int*();
 
@@ -222,7 +222,7 @@ public:
 
   /**
   * @brief implicit conversion to int*
-  * @param: param
+  * @param: 
   */
   operator int*();
 
