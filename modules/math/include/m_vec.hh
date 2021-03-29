@@ -36,6 +36,12 @@ public:
    */
   float& operator[](const int& i);
 
+  /**
+   * @brief implicit conversion to float*
+   * @param:
+   */
+  operator float*();
+
   // TODO operator overloading
 }; /* vec2 */
 
@@ -65,6 +71,12 @@ public:
    */
   float& operator[](const int& i);
 
+  /**
+   * @brief implicit conversion to float*
+   * @param:
+   */
+  operator float*();
+
   // TODO operator overloading
 }; /* vec3 */
 
@@ -86,8 +98,7 @@ public:
    *       : const float& w = 0
    * @return:
    */
-  vec4(const float& x = 0, const float& y = 0, const float& z = 0,
-       const float& w = 0);
+  vec4(const float& x = 0, const float& y = 0, const float& z = 0, const float& w = 0);
 
   /**
    * @brief access element i
@@ -95,6 +106,12 @@ public:
    * @return: float&
    */
   float& operator[](const int& i);
+
+  /**
+   * @brief implicit conversion to float*
+   * @param:
+   */
+  operator float*();
 
   // TODO operator overloading
 }; /* vec4 */
@@ -131,6 +148,12 @@ public:
    */
   int& operator[](const int& i);
 
+  /**
+   * @brief implicit conversion to int*
+   * @param:
+   */
+  operator int*();
+
   // TODO operator overloading
 }; /* ivec2 */
 
@@ -159,6 +182,12 @@ public:
    * @return: int&
    */
   int& operator[](const int& i);
+
+  /**
+   * @brief implicit conversion to int*
+   * @param:
+   */
+  operator int*();
 
   // TODO operator overloading
 }; /* ivec3 */
@@ -189,6 +218,12 @@ public:
    * @return: int&
    */
   int& operator[](const int& i);
+
+  /**
+   * @brief implicit conversion to int*
+   * @param:
+   */
+  operator int*();
 
   // TODO operator overloading
 }; /* ivec4 */

@@ -1,7 +1,6 @@
 #include "r_shader.hh"
 
-Shadowheart::Renderer::Shader::Shader(const std::string& vertexShaderPath,
-                                      const std::string& fragmentShaderPath) {
+Shadowheart::Renderer::Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentShaderPath) {
   std::string vertCode, fragCode;
   std::ifstream vertShaderFile, fragShaderFile;
 
@@ -28,8 +27,7 @@ Shadowheart::Renderer::Shader::Shader(const std::string& vertexShaderPath,
     fragCode = fragShaderStream.str();
 
   } catch (std::ifstream::failure& exception) {
-    std::cout << "ERROR::RENDERER::SHADER::FILE_NOT_SUCCESSFULLY_READ"
-              << std::endl;
+    std::cout << "ERROR::RENDERER::SHADER::FILE_NOT_SUCCESSFULLY_READ" << std::endl;
   }
 
   // Create the actual code string for compilation and linking
@@ -53,16 +51,14 @@ Shadowheart::Renderer::Shader::Shader(const std::string& vertexShaderPath,
   glGetShaderiv(vertShader, GL_COMPILE_STATUS, &success);
   if (!success) {
     glGetShaderInfoLog(vertShader, 512, nullptr, infoLog);
-    std::cout << "ERROR::RENDERER::SHADER::VERTEX::COMPILATION_FAILED\n"
-              << infoLog << std::endl;
+    std::cout << "ERROR::RENDERER::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
   }
 
   glCompileShader(fragShader);
   glGetShaderiv(fragShader, GL_COMPILE_STATUS, &success);
   if (!success) {
     glGetShaderInfoLog(fragShader, 512, nullptr, infoLog);
-    std::cout << "ERROR::RENDERER::SHADER::VERTEX::COMPILATION_FAILED\n"
-              << infoLog << std::endl;
+    std::cout << "ERROR::RENDERER::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
   }
 
   // Create the shader-program and check for linking errors
@@ -74,8 +70,7 @@ Shadowheart::Renderer::Shader::Shader(const std::string& vertexShaderPath,
   glGetProgramiv(_id, GL_LINK_STATUS, &success);
   if (!success) {
     glGetProgramInfoLog(_id, 512, nullptr, infoLog);
-    std::cout << "ERROR::RENDERER::SHADER::PROGRAM::LINKING_FAILED\n"
-              << infoLog << std::endl;
+    std::cout << "ERROR::RENDERER::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
   }
 
   // Delete / Free the shaders
