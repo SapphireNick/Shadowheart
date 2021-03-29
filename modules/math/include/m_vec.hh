@@ -9,7 +9,7 @@ namespace Math {
  *
  * alias for float
  */
-using vec1 =float;
+using vec1 = float;
 
 /**
  * 2D float vector
