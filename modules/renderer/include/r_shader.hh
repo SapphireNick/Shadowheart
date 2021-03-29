@@ -1,12 +1,8 @@
 #ifndef R_SHADER_HH
 #define R_SHADER_HH
 
-#include <fstream>
-#include <iostream>
-#include <sstream>
-#include <string>
-
 #include "glad/glad.h"
+#include "m_vec.hh"
 
 namespace Shadowheart {
 namespace Renderer {
@@ -46,7 +42,74 @@ public:
    */
   void use();
 
-  // TODO: #5 convenience functions to access / modify uniforms
+  // Uniform functions for float data
+
+  /**
+   * @brief Set float uniform in current shader
+   * @param: std::string name_of_uniform
+   *       : Math::vec1 data
+   * @return: void
+   */
+  void setUniformf(std::string name_of_uniform, Math::vec1 data);
+
+  /**
+   * @brief Set float uniform in current shader
+   * @param: std::string name_of_uniform
+   *       : Math::vec2 data
+   * @return: void
+   */
+  void setUniform2f(std::string name_of_uniform, Math::vec2 data);
+
+  /**
+   * @brief Set float uniform in current shader
+   * @param: std::string name_of_uniform
+   *       : Math::vec3 data
+   * @return: void
+   */
+
+  void setUniform3f(std::string name_of_uniform, Math::vec3 data);
+
+  /**
+   * @brief Set float uniform in current shader
+   * @param: std::string name_of_uniform
+   *       : Math::vec4 data
+   * @return: void
+   */
+  void setUniform4f(std::string name_of_uniform, Math::vec4 data);
+
+  // Uniform function for int data
+
+  /**
+   * @brief Set int uniform in current shader
+   * @param: std::string name_of_uniform
+   *       : Math::ivec1 data
+   * @return: void
+   */
+  void setUniformi(std::string name_of_uniform, Math::ivec1 data);
+
+  /**
+   * @brief Set int uniform in current shader
+   * @param: std::string name_of_uniform
+   *       : Math::ivec2 data
+   * @return: void
+   */
+  void setUniform2i(std::string name_of_uniform, Math::ivec2 data);
+
+  /**
+   * @brief Set int uniform in current shader
+   * @param: std::string name_of_uniform
+   *       : Math::ivec3 data
+   * @return: void
+   */
+  void setUniform3i(std::string name_of_uniform, Math::ivec3 data);
+
+  /**
+   * @brief Set int uniform in current shader
+   * @param: std::string name_of_uniform
+   *       : Math::ivec4 data
+   * @return: void
+   */
+  void setUniform4i(std::string name_of_uniform, Math::ivec4 data);
 
 }; /* Shader */
 }  // namespace Renderer
