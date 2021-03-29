@@ -1,7 +1,7 @@
 #include "r_shader.hh"
 
-Shadowheart::Renderer::Shader::Shader(const std::string &vertexShaderPath,
-                                      const std::string &fragmentShaderPath) {
+Shadowheart::Renderer::Shader::Shader(const std::string& vertexShaderPath,
+                                      const std::string& fragmentShaderPath) {
   std::string vertCode, fragCode;
   std::ifstream vertShaderFile, fragShaderFile;
 
@@ -27,14 +27,14 @@ Shadowheart::Renderer::Shader::Shader(const std::string &vertexShaderPath,
     vertCode = vertShaderStream.str();
     fragCode = fragShaderStream.str();
 
-  } catch (std::ifstream::failure &exception) {
+  } catch (std::ifstream::failure& exception) {
     std::cout << "ERROR::RENDERER::SHADER::FILE_NOT_SUCCESSFULLY_READ"
               << std::endl;
   }
 
   // Create the actual code string for compilation and linking
-  const char *vertexShaderCode = vertCode.c_str();
-  const char *fragmentShaderCode = fragCode.c_str();
+  const char* vertexShaderCode = vertCode.c_str();
+  const char* fragmentShaderCode = fragCode.c_str();
 
   // Used to check various states during compilation and linking
   int success;
