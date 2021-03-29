@@ -37,9 +37,9 @@ public:
   float& operator[](const int& i);
 
   /**
-  * @brief implicit conversion to float*
-  * @param: 
-  */
+   * @brief implicit conversion to float*
+   * @param:
+   */
   operator float*();
 
   // TODO operator overloading
@@ -72,9 +72,9 @@ public:
   float& operator[](const int& i);
 
   /**
-  * @brief implicit conversion to float*
-  * @param: 
-  */
+   * @brief implicit conversion to float*
+   * @param:
+   */
   operator float*();
 
   // TODO operator overloading
@@ -98,8 +98,7 @@ public:
    *       : const float& w = 0
    * @return:
    */
-  vec4(const float& x = 0, const float& y = 0, const float& z = 0,
-       const float& w = 0);
+  vec4(const float& x = 0, const float& y = 0, const float& z = 0, const float& w = 0);
 
   /**
    * @brief access element i
@@ -109,9 +108,9 @@ public:
   float& operator[](const int& i);
 
   /**
-  * @brief implicit conversion to float*
-  * @param: 
-  */
+   * @brief implicit conversion to float*
+   * @param:
+   */
   operator float*();
 
   // TODO operator overloading
@@ -150,9 +149,9 @@ public:
   int& operator[](const int& i);
 
   /**
-  * @brief implicit conversion to int*
-  * @param: 
-  */
+   * @brief implicit conversion to int*
+   * @param:
+   */
   operator int*();
 
   // TODO operator overloading
@@ -185,9 +184,9 @@ public:
   int& operator[](const int& i);
 
   /**
-  * @brief implicit conversion to int*
-  * @param: 
-  */
+   * @brief implicit conversion to int*
+   * @param:
+   */
   operator int*();
 
   // TODO operator overloading
@@ -221,9 +220,9 @@ public:
   int& operator[](const int& i);
 
   /**
-  * @brief implicit conversion to int*
-  * @param: 
-  */
+   * @brief implicit conversion to int*
+   * @param:
+   */
   operator int*();
 
   // TODO operator overloading
