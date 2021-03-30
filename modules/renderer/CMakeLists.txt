@@ -14,7 +14,7 @@ find_package(OpenGL REQUIRED)
 include_directories(
     ../lib/glfw/include
     ../lib/glad/include
-    ../modules
+    ../math/include
     ./include
 )
 

@@ -1,6 +1,8 @@
 #ifndef R_SHADER_HH
 #define R_SHADER_HH
 
+#include <string>
+
 #include "glad/glad.h"
 #include "m_vec.hh"
 

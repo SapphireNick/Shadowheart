@@ -3,7 +3,6 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
-#include <string>
 
 Shadowheart::Renderer::Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentShaderPath) {
   std::string vertCode, fragCode;
