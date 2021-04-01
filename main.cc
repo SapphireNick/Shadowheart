@@ -1,17 +1,9 @@
 #include "Shadowheart.hh"
 
-int Shadowheart::load() {
-    return 0;
-}
+int Shadowheart::load() { return 0; }
 
-void Shadowheart::update() {
-    return;
-}
+void Shadowheart::update() { return; }
 
-void Shadowheart::draw() {
-    return;
-}
+void Shadowheart::draw() { return; }
 
-int main() {
-    Shadowheart::start();
-}
+int main() { Shadowheart::start(); }
