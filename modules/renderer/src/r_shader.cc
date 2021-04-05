@@ -1,6 +1,13 @@
 #include "r_shader.hh"
 
-Shadowheart::Renderer::Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentShaderPath) {
+#include <fstream>
+#include <iostream>
+#include <sstream>
+
+namespace Shadowheart {
+namespace Renderer {
+
+Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentShaderPath) {
   std::string vertCode, fragCode;
   std::ifstream vertShaderFile, fragShaderFile;
 
@@ -78,6 +85,40 @@ Shadowheart::Renderer::Shader::Shader(const std::string& vertexShaderPath, const
   glDeleteShader(fragShader);
 }
 
-Shadowheart::Renderer::Shader::~Shader() { glDeleteProgram(_id); }
+Shader::~Shader() { glDeleteProgram(_id); }
 
-void Shadowheart::Renderer::Shader::use() { glUseProgram(_id); }
+void Shader::use() { glUseProgram(_id); }
+
+void Shader::setUniformf(std::string name_of_uniform, Math::vec1 data) {
+  glUniform1f(glGetUniformLocation(_id, name_of_uniform.c_str()), data);
+}
+
+void Shader::setUniform2f(std::string name_of_uniform, Math::vec2 data) {
+  glUniform2f(glGetUniformLocation(_id, name_of_uniform.c_str()), data[0], data[1]);
+}
+
+void Shader::setUniform3f(std::string name_of_uniform, Math::vec3 data) {
+  glUniform3f(glGetUniformLocation(_id, name_of_uniform.c_str()), data[0], data[1], data[2]);
+}
+
+void Shader::setUniform4f(std::string name_of_uniform, Math::vec4 data) {
+  glUniform4f(glGetUniformLocation(_id, name_of_uniform.c_str()), data[0], data[1], data[2], data[3]);
+}
+
+void Shader::setUniformi(std::string name_of_uniform, Math::ivec1 data) {
+  glUniform1i(glGetUniformLocation(_id, name_of_uniform.c_str()), data);
+}
+
+void Shader::setUniform2i(std::string name_of_uniform, Math::ivec2 data) {
+  glUniform2i(glGetUniformLocation(_id, name_of_uniform.c_str()), data[0], data[1]);
+}
+
+void Shader::setUniform3i(std::string name_of_uniform, Math::ivec3 data) {
+  glUniform3i(glGetUniformLocation(_id, name_of_uniform.c_str()), data[0], data[1], data[2]);
+}
+
+void Shader::setUniform4i(std::string name_of_uniform, Math::ivec4 data) {
+  glUniform4i(glGetUniformLocation(_id, name_of_uniform.c_str()), data[0], data[1], data[2], data[3]);
+}
+}  // Namespace Renderer
+}  // Namespace Shadowheart
