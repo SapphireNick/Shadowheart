@@ -20,6 +20,7 @@ include_directories(
 
 # Add libraries
 add_library(m_vec src/m_vec.cc)
+add_library(m_mat src/m_mat.cc)
 
 # Add subdirs
 
