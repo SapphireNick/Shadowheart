@@ -22,7 +22,7 @@ private:
 
 public:
   /**
-   * @brief constuctor defaults to {0f, 0f}
+   * @brief constructor defaults to {0f, 0f}
    * @param: const float& x = 0
    *       : const float& y = 0
    * @return:
@@ -56,7 +56,7 @@ private:
 
 public:
   /**
-   * @brief constuctor defaults to {0f, 0f, 0f}
+   * @brief constructor defaults to {0f, 0f, 0f}
    * @param: const float& x = 0
    *       : const float& y = 0
    *       : const float& z = 0
@@ -91,7 +91,7 @@ private:
 
 public:
   /**
-   * @brief constuctor defaults to {0f, 0f}
+   * @brief constructor defaults to {0f, 0f, 0f, 0f}
    * @param: const float& x = 0
    *       : const float& y = 0
    *       : const float& z = 0
@@ -134,7 +134,7 @@ private:
 
 public:
   /**
-   * @brief constuctor defaults to {0f, 0f}
+   * @brief constructor defaults to {0, 0}
    * @param: const int& x = 0
    *       : const int& y = 0
    * @return:
@@ -168,7 +168,7 @@ private:
 
 public:
   /**
-   * @brief constuctor defaults to {0f, 0f, 0f}
+   * @brief constructor defaults to {0, 0, 0}
    * @param: const int& x = 0
    *       : const int& y = 0
    *       : const int& z = 0
@@ -203,7 +203,7 @@ private:
 
 public:
   /**
-   * @brief constuctor defaults to {0f, 0f}
+   * @brief constructor defaults to {0, 0, 0, 0}
    * @param: const int& x = 0
    *       : const int& y = 0
    *       : const int& z = 0
