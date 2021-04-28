@@ -88,8 +88,8 @@ public:
    *       : const vec4& w = {0, 0, 0, 0}
    * @return:
    */
-  mat4(const vec4& x = {0, 0, 0, 0}, const vec4& y = {0, 0, 0, 0},
-       const vec4& z = {0, 0, 0, 0}, const vec4& w = {0, 0, 0, 0});
+  mat4(const vec4& x = {0, 0, 0, 0}, const vec4& y = {0, 0, 0, 0}, const vec4& z = {0, 0, 0, 0},
+       const vec4& w = {0, 0, 0, 0});
 
   /**
    * @brief access element i
@@ -183,8 +183,8 @@ public:
    *       : const ivec4& w = {0, 0, 0, 0}
    * @return:
    */
-  imat4(const ivec4& x = {0, 0, 0, 0}, const ivec4& y = {0, 0, 0, 0},
-        const ivec4& z = {0, 0, 0, 0}, const ivec4& w = {0, 0, 0, 0});
+  imat4(const ivec4& x = {0, 0, 0, 0}, const ivec4& y = {0, 0, 0, 0}, const ivec4& z = {0, 0, 0, 0},
+        const ivec4& w = {0, 0, 0, 0});
 
   /**
    * @brief access element i
