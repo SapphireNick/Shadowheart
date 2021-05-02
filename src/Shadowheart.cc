@@ -5,9 +5,16 @@
 #include "../lib/glad/include/glad/glad.h"
 #include "../lib/glfw/include/GLFW/glfw3.h"
 
-void Shadowheart::start() {
+namespace Shadowheart {
+
+/**
+ * A semi-global variable (for this file) conatining user settings
+ */
+static t_options __userwindowopt;
+
+void start() {
   // Execute load function to load user preferences and settings
-  Shadowheart::load();
+  load();
 
   // Start creting OpenGL context
   glfwInit();
@@ -18,9 +25,10 @@ void Shadowheart::start() {
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
   // Create the window object
-  // TODO : Implement usage of user settings for window settings
+  // TODO : Implement usage of user settings for fullscreen and resizability
   // This will do for testing
-  GLFWwindow* window = glfwCreateWindow(800, 600, "Gametitle", NULL, NULL);
+  GLFWwindow* window = glfwCreateWindow(__userwindowopt.WINDOW_WIDTH, __userwindowopt.WINDOW_HEIGHT,
+                                        __userwindowopt.WINDOW_TITLE.c_str(), NULL, NULL);
   if (window == NULL) {
     std::cout << "ERROR::SHADOWHEART::FAILED_TO_CREATE_WINDOW" << std::endl;
     glfwTerminate();
@@ -36,8 +44,7 @@ void Shadowheart::start() {
 
   // Set window dimensions for rendering
   // TODO : Create callback-functions for input and resize handling
-  // Also implement usage of user settings here aswel
-  glViewport(0, 0, 800, 600);
+  glViewport(0, 0, __userwindowopt.WINDOW_WIDTH, __userwindowopt.WINDOW_HEIGHT);
 
   // MAIN LOOP
   while (!glfwWindowShouldClose(window)) {
@@ -45,11 +52,18 @@ void Shadowheart::start() {
     glfwPollEvents();
 
     // User functions for drawing and game-logic goes here
-    Shadowheart::draw();
-    Shadowheart::update();
+    draw();
+    update();
   }
 
   // Terminate everything on closure
   glfwTerminate();
   return;
 }
+
+void setupScreen(int WINDOW_WIDTH, int WINDOW_HEIGT, std::string WINDOW_TITLE, bool FULLSCREEN = false,
+                 bool RESIZABLE = true) {
+  __userwindowopt = t_options{WINDOW_WIDTH, WINDOW_HEIGT, WINDOW_TITLE, FULLSCREEN, RESIZABLE};
+}
+
+}  // namespace Shadowheart

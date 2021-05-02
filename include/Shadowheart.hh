@@ -1,7 +1,21 @@
 #ifndef SHADOWHEART_HH
 #define SHADOWHEART_HH
 
+#include <string>
+
 namespace Shadowheart {
+
+/**
+ * Struct to hold user settings regarding the window attributes
+ *
+ */
+struct t_options {
+  int WINDOW_HEIGHT;
+  int WINDOW_WIDTH;
+  std::string WINDOW_TITLE;
+  bool FULLSCREEN;
+  bool RESIZABLE;
+};
 
 /**
  * @brief Load function before main game loop
@@ -30,6 +44,18 @@ void draw();
  * @return: void
  */
 void start();
+
+/**
+ * @brief Function to setup screen options
+ * @param: int WINDOW_WIDHT
+ *         int WINDOW_HEIGHT
+ *         std::string WINDOW_TITLE
+ *         bool fullscreen = false
+ *         bool resizable = true
+ * @return: void
+ */
+void setupScreen(int WINDOW_WIDTH, int WINDOW_HEIGT, std::string WINDOW_TITLE, bool FULLSCREEN = false,
+                 bool RESIZABLE = true);
 
 }  // namespace Shadowheart
 
