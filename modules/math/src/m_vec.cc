@@ -25,14 +25,9 @@ vec4::operator float*() { return _v; }
 vec4& vec4::operator+(const vec4& a) {
   return vec4(_v[0] + a._v[0], _v[1] + a._v[1], _v[2] + a._v[2], _v[3] + a._v[3]);
 }
-float vec4::operator*(const vec4& a) { 
-  return _v[0] * a._v[0] + _v[1] * a._v[1] + _v[2] * a._v[2] + _v[3] + a._v[3];
-}
-vec4 vec4::operator*(const float& a) {
-  return vec4(_v[0] * a, _v[1] * a, _v[2] * a, _v[3] * a);
-}
+float vec4::operator*(const vec4& a) { return _v[0] * a._v[0] + _v[1] * a._v[1] + _v[2] * a._v[2] + _v[3] + a._v[3]; }
+vec4 vec4::operator*(const float& a) { return vec4(_v[0] * a, _v[1] * a, _v[2] * a, _v[3] * a); }
 vec4 vec4::operator*(const float& a, const vec4& b) { return b * a; }
-
 
 ivec2::ivec2(const int& x, const int& y) : _v{x, y} {}
 int& ivec2::operator[](const int& i) { return _v[i]; }
@@ -56,12 +51,8 @@ ivec4::operator int*() { return _v; }
 ivec4& ivec4::operator+(const ivec4& a) {
   return ivec4(_v[0] + a._v[0], _v[1] + a._v[1], _v[2] + a._v[2], _v[3] + a._v[3]);
 }
-int ivec4::operator*(const ivec4& a) { 
-  return _v[0] * a._v[0] + _v[1] * a._v[1] + _v[2] * a._v[2] + _v[3] + a._v[3];
-}
-ivec4 ivec4::operator*(cont int& a) {
-  return ivec4(_v[0] * a, _v[1] * a, _v[2] * a, _v[3] * a);
-}
+int ivec4::operator*(const ivec4& a) { return _v[0] * a._v[0] + _v[1] * a._v[1] + _v[2] * a._v[2] + _v[3] + a._v[3]; }
+ivec4 ivec4::operator*(cont int& a) { return ivec4(_v[0] * a, _v[1] * a, _v[2] * a, _v[3] * a); }
 ivec4 ivec4::operator*(const int& a, const ivec4& b) { return b * a; }
 
 }  // namespace Math
