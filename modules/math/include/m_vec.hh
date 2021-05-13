@@ -42,7 +42,30 @@ public:
    */
   operator float*();
 
-  // TODO operator overloading
+  /**
+   * @brief Overloading of addition-operator
+   * @param: const Math::vec2& a
+   */
+  vec2 operator+(const vec2& a);
+
+  /**
+   * @brief Overloading of multiplication-operator of 2 vectors
+   * @param: const Math::vec2& a
+   */
+  float operator*(const vec2& a);
+
+  /**
+   * @brief Overloading of multiplication-operator with a scalar
+   * @param: const float& a
+   */
+  vec2 operator*(const float& a);
+
+  /**
+   * @brief Overloading of multiplication-operator with a scalar
+   * @param: const float& a
+   *         const Math::vec2& b
+   */
+  friend vec2 operator*(const float& a, const vec2& b);
 }; /* vec2 */
 
 /**
@@ -77,7 +100,30 @@ public:
    */
   operator float*();
 
-  // TODO operator overloading
+  /**
+   * @brief Overloading of addition-operator
+   * @param: Math::vec3& a
+   */
+  vec3 operator+(const vec3& a);
+
+  /**
+   * @brief Overloading of multiplication-operator of 2 vectors
+   * @param: Math::vec3& a
+   */
+  float operator*(const vec3& a);
+
+  /**
+   * @brief Overloading of multiplication-operator with a scalar
+   * @param: const float& a
+   */
+  vec3 operator*(const float& a);
+
+  /**
+   * @brief Overloading of multiplication-operator with a scalar
+   * @param: const float& a
+   *         const Math::vec3& b
+   */
+  friend vec3 operator*(const float& a, const vec3& b);
 }; /* vec3 */
 
 /**
@@ -113,7 +159,30 @@ public:
    */
   operator float*();
 
-  // TODO operator overloading
+  /**
+   * @brief Overloading of addition-operator
+   * @param: Math::vec4& a
+   */
+  vec4 operator+(const vec4& a);
+
+  /**
+   * @brief Overloading of multiplication-operator of 2 vectors
+   * @param: Math::vec4& a
+   */
+  float operator*(const vec4& a);
+
+  /**
+   * @brief Overloading of multiplication-operator with a scalar
+   * @param: const float& a
+   */
+  vec4 operator*(const float& a);
+
+  /**
+   * @brief Overloading of multiplication-operator with a scalar
+   * @param: const float& a
+   *         const Math::vec4& b
+   */
+  friend vec4 operator*(const float& a, const vec4& b);
 }; /* vec4 */
 
 /**
@@ -154,7 +223,30 @@ public:
    */
   operator int*();
 
-  // TODO operator overloading
+  /**
+   * @brief Overloading of addition-operator
+   * @param: Math::ivec2& a
+   */
+  ivec2 operator+(const ivec2& a);
+
+  /**
+   * @brief Overloading of multiplication-operator of 2 vectors
+   * @param: Math::ivec2& a
+   */
+  int operator*(const ivec2& a);
+
+  /**
+   * @brief Overloading of multiplication-operator with a scalar
+   * @param: const int& a
+   */
+  ivec2 operator*(const int& a);
+
+  /**
+   * @brief Overloading of multiplication-operator with a scalar
+   * @param: const int& a
+   *         const Math::ivec2& b
+   */
+  friend ivec2 operator*(const int& a, const ivec2& b);
 }; /* ivec2 */
 
 /**
@@ -189,7 +281,30 @@ public:
    */
   operator int*();
 
-  // TODO operator overloading
+  /**
+   * @brief Overloading of addition-operator
+   * @param: Math::ivec3& a
+   */
+  ivec3 operator+(const ivec3& a);
+
+  /**
+   * @brief Overloading of multiplication-operator of 2 vectors
+   * @param: Math::ivec3& a
+   */
+  int operator*(const ivec3& a);
+
+  /**
+   * @brief Overloading of multiplication-operator with a scalar
+   * @param: const int& a
+   */
+  ivec3 operator*(const int& a);
+
+  /**
+   * @brief Overloading of multiplication-operator with a scalar
+   * @param: const const int& a
+   *         const Math::ivec3& b
+   */
+  friend ivec3 operator*(const int& a, const ivec3& b);
 }; /* ivec3 */
 
 /**
@@ -225,7 +340,30 @@ public:
    */
   operator int*();
 
-  // TODO operator overloading
+  /**
+   * @brief Overloading of addition-operator
+   * @param: Math::ivec4& a
+   */
+  ivec4 operator+(const ivec4& a);
+
+  /**
+   * @brief Overloading of multiplication-operator of 2 vectors
+   * @param: Math::ivec4& a
+   */
+  int operator*(const ivec4& a);
+
+  /**
+   * @brief Overloading of multiplication-operator with a scalar
+   * @param: const int& a
+   */
+  ivec4 operator*(const int& a);
+
+  /**
+   * @brief Overloading of multiplication-operator with a scalar
+   * @param: const int& a
+   *         const Math::ivec4& b
+   */
+  friend ivec4 operator*(const int& a, const ivec4& b);
 }; /* ivec4 */
 
 }  // namespace Math
