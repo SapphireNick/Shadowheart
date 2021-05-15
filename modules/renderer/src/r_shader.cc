@@ -11,15 +11,15 @@ Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentS
   std::string vertCode, fragCode;
   std::ifstream vertShaderFile, fragShaderFile;
 
-  #ifdef DEBUG
+#ifdef DEBUG
   // Make sure streams can throw exceptions
   vertShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
   fragShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
-  #endif
+#endif
 
-  #ifdef DEBUG
+#ifdef DEBUG
   try {
-  #endif
+#endif
     // Open files and create a stringstream
     vertShaderFile.open(vertexShaderPath);
     fragShaderFile.open(fragmentShaderPath);
@@ -37,21 +37,21 @@ Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentS
     vertCode = vertShaderStream.str();
     fragCode = fragShaderStream.str();
 
-  #ifdef DEBUG
+#ifdef DEBUG
   } catch (std::ifstream::failure& exception) {
     std::cout << "ERROR::RENDERER::SHADER::FILE_NOT_SUCCESSFULLY_READ" << std::endl;
   }
-  #endif
+#endif
 
   // Create the actual code string for compilation and linking
   const char* vertexShaderCode = vertCode.c_str();
   const char* fragmentShaderCode = fragCode.c_str();
 
-  #ifdef DEBUG
+#ifdef DEBUG
   // Used to check various states during compilation and linking
   int success;
   char infoLog[512];
-  #endif
+#endif
 
   // Store shader-ids
   unsigned int vertShader, fragShader;
@@ -63,22 +63,22 @@ Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentS
 
   // Compile the shaders and check for compilation errors
   glCompileShader(vertShader);
-  #ifdef DEBUG
+#ifdef DEBUG
   glGetShaderiv(vertShader, GL_COMPILE_STATUS, &success);
   if (!success) {
     glGetShaderInfoLog(vertShader, 512, nullptr, infoLog);
     std::cout << "ERROR::RENDERER::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
   }
-  #endif
+#endif
 
   glCompileShader(fragShader);
-  #ifdef DEBUG
+#ifdef DEBUG
   glGetShaderiv(fragShader, GL_COMPILE_STATUS, &success);
   if (!success) {
     glGetShaderInfoLog(fragShader, 512, nullptr, infoLog);
     std::cout << "ERROR::RENDERER::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
   }
-  #endif
+#endif
 
   // Create the shader-program and check for linking errors
   _id = glCreateProgram();
@@ -86,13 +86,13 @@ Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentS
   glAttachShader(_id, fragShader);
   glLinkProgram(_id);
 
-  #ifdef DEBUG
+#ifdef DEBUG
   glGetProgramiv(_id, GL_LINK_STATUS, &success);
   if (!success) {
     glGetProgramInfoLog(_id, 512, nullptr, infoLog);
     std::cout << "ERROR::RENDERER::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
   }
-  #endif
+#endif
 
   // Delete / Free the shaders
   glDeleteShader(vertShader);
