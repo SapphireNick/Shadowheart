@@ -61,8 +61,8 @@ void start() {
   return;
 }
 
-void setupScreen(int WINDOW_WIDTH, int WINDOW_HEIGT, std::string WINDOW_TITLE, bool FULLSCREEN = false,
-                 bool RESIZABLE = true) {
+void setupScreen(int WINDOW_WIDTH, int WINDOW_HEIGT, std::string WINDOW_TITLE, bool FULLSCREEN,
+                 bool RESIZABLE) {
   __userwindowopt = t_options{WINDOW_WIDTH, WINDOW_HEIGT, WINDOW_TITLE, FULLSCREEN, RESIZABLE};
 }
 
