@@ -10,6 +10,12 @@ set(CMAKE_CXX_FLAGS -Wall)
 
 find_package(OpenGL REQUIRED)
 
+# Preproccesor directive for debugging
+option(USE_DEBUG "Entering debug mode..." OFF)
+if(USE_DEBUG)
+    add_definitions(-DDEBUG)
+endif()
+
 # Include directories
 include_directories(
     ../lib/glfw/include
