@@ -22,8 +22,12 @@ vec3 operator*(const float& a, const vec3& b) { return b * a; }
 vec4::vec4(const float& x, const float& y, const float& z, const float& w) : _v{x, y, z, w} {}
 float& vec4::operator[](const int& i) { return _v[i]; }
 vec4::operator float*() { return _v; }
-vec4 vec4::operator+(const vec4& a) const { return vec4(_v[0] + a._v[0], _v[1] + a._v[1], _v[2] + a._v[2], _v[3] + a._v[3]); }
-float vec4::operator*(const vec4& a) const { return _v[0] * a._v[0] + _v[1] * a._v[1] + _v[2] * a._v[2] + _v[3] * a._v[3]; }
+vec4 vec4::operator+(const vec4& a) const {
+  return vec4(_v[0] + a._v[0], _v[1] + a._v[1], _v[2] + a._v[2], _v[3] + a._v[3]);
+}
+float vec4::operator*(const vec4& a) const {
+  return _v[0] * a._v[0] + _v[1] * a._v[1] + _v[2] * a._v[2] + _v[3] * a._v[3];
+}
 vec4 vec4::operator*(const float& a) const { return vec4(_v[0] * a, _v[1] * a, _v[2] * a, _v[3] * a); }
 vec4 operator*(const float& a, const vec4& b) { return b * a; }
 
@@ -49,7 +53,9 @@ ivec4::operator int*() { return _v; }
 ivec4 ivec4::operator+(const ivec4& a) const {
   return ivec4(_v[0] + a._v[0], _v[1] + a._v[1], _v[2] + a._v[2], _v[3] + a._v[3]);
 }
-int ivec4::operator*(const ivec4& a) const { return _v[0] * a._v[0] + _v[1] * a._v[1] + _v[2] * a._v[2] + _v[3] * a._v[3]; }
+int ivec4::operator*(const ivec4& a) const {
+  return _v[0] * a._v[0] + _v[1] * a._v[1] + _v[2] * a._v[2] + _v[3] * a._v[3];
+}
 ivec4 ivec4::operator*(const int& a) const { return ivec4(_v[0] * a, _v[1] * a, _v[2] * a, _v[3] * a); }
 ivec4 operator*(const int& a, const ivec4& b) { return b * a; }
 
