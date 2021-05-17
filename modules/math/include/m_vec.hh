@@ -46,19 +46,19 @@ public:
    * @brief Overloading of addition-operator
    * @param: const Math::vec2& a
    */
-  vec2 operator+(const vec2& a);
+  vec2 operator+(const vec2& a) const;
 
   /**
    * @brief Overloading of multiplication-operator of 2 vectors
    * @param: const Math::vec2& a
    */
-  float operator*(const vec2& a);
+  float operator*(const vec2& a) const;
 
   /**
    * @brief Overloading of multiplication-operator with a scalar
    * @param: const float& a
    */
-  vec2 operator*(const float& a);
+  vec2 operator*(const float& a) const;
 
   /**
    * @brief Overloading of multiplication-operator with a scalar
@@ -104,19 +104,19 @@ public:
    * @brief Overloading of addition-operator
    * @param: Math::vec3& a
    */
-  vec3 operator+(const vec3& a);
+  vec3 operator+(const vec3& a) const;
 
   /**
    * @brief Overloading of multiplication-operator of 2 vectors
    * @param: Math::vec3& a
    */
-  float operator*(const vec3& a);
+  float operator*(const vec3& a) const;
 
   /**
    * @brief Overloading of multiplication-operator with a scalar
    * @param: const float& a
    */
-  vec3 operator*(const float& a);
+  vec3 operator*(const float& a) const;
 
   /**
    * @brief Overloading of multiplication-operator with a scalar
@@ -163,19 +163,19 @@ public:
    * @brief Overloading of addition-operator
    * @param: Math::vec4& a
    */
-  vec4 operator+(const vec4& a);
+  vec4 operator+(const vec4& a) const;
 
   /**
    * @brief Overloading of multiplication-operator of 2 vectors
    * @param: Math::vec4& a
    */
-  float operator*(const vec4& a);
+  float operator*(const vec4& a) const;
 
   /**
    * @brief Overloading of multiplication-operator with a scalar
    * @param: const float& a
    */
-  vec4 operator*(const float& a);
+  vec4 operator*(const float& a) const;
 
   /**
    * @brief Overloading of multiplication-operator with a scalar
@@ -227,19 +227,19 @@ public:
    * @brief Overloading of addition-operator
    * @param: Math::ivec2& a
    */
-  ivec2 operator+(const ivec2& a);
+  ivec2 operator+(const ivec2& a) const;
 
   /**
    * @brief Overloading of multiplication-operator of 2 vectors
    * @param: Math::ivec2& a
    */
-  int operator*(const ivec2& a);
+  int operator*(const ivec2& a) const;
 
   /**
    * @brief Overloading of multiplication-operator with a scalar
    * @param: const int& a
    */
-  ivec2 operator*(const int& a);
+  ivec2 operator*(const int& a) const;
 
   /**
    * @brief Overloading of multiplication-operator with a scalar
@@ -285,19 +285,19 @@ public:
    * @brief Overloading of addition-operator
    * @param: Math::ivec3& a
    */
-  ivec3 operator+(const ivec3& a);
+  ivec3 operator+(const ivec3& a) const;
 
   /**
    * @brief Overloading of multiplication-operator of 2 vectors
    * @param: Math::ivec3& a
    */
-  int operator*(const ivec3& a);
+  int operator*(const ivec3& a) const;
 
   /**
    * @brief Overloading of multiplication-operator with a scalar
    * @param: const int& a
    */
-  ivec3 operator*(const int& a);
+  ivec3 operator*(const int& a) const;
 
   /**
    * @brief Overloading of multiplication-operator with a scalar
@@ -344,19 +344,19 @@ public:
    * @brief Overloading of addition-operator
    * @param: Math::ivec4& a
    */
-  ivec4 operator+(const ivec4& a);
+  ivec4 operator+(const ivec4& a) const;
 
   /**
    * @brief Overloading of multiplication-operator of 2 vectors
    * @param: Math::ivec4& a
    */
-  int operator*(const ivec4& a);
+  int operator*(const ivec4& a) const;
 
   /**
    * @brief Overloading of multiplication-operator with a scalar
    * @param: const int& a
    */
-  ivec4 operator*(const int& a);
+  ivec4 operator*(const int& a) const;
 
   /**
    * @brief Overloading of multiplication-operator with a scalar
