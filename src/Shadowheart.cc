@@ -29,18 +29,24 @@ void start() {
   // This will do for testing
   GLFWwindow* window = glfwCreateWindow(__userwindowopt.WINDOW_WIDTH, __userwindowopt.WINDOW_HEIGHT,
                                         __userwindowopt.WINDOW_TITLE.c_str(), NULL, NULL);
+  #ifdef DEBUG
   if (window == NULL) {
     std::cout << "ERROR::SHADOWHEART::FAILED_TO_CREATE_WINDOW" << std::endl;
     glfwTerminate();
     return;
   }
+  #endif
   glfwMakeContextCurrent(window);
 
   // Setup glad context
+  #ifdef DEBUG
   if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
     std::cout << "ERROR::SHADOWHEART::FAILED_TO_INITIALIZE_GLAD" << std::endl;
     return;
   }
+  #else
+  gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+  #endif
 
   // Set window dimensions for rendering
   // TODO : Create callback-functions for input and resize handling
