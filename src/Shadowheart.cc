@@ -38,6 +38,12 @@ void start() {
   #endif
   glfwMakeContextCurrent(window);
 
+  // Callback function for resizing
+  auto framebuffer_size_callback = [] (GLFWwindow* window, int width, int height) {
+    glViewport(0, 0, width, height);
+  };
+  glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
   // Setup glad context
   #ifdef DEBUG
   if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {

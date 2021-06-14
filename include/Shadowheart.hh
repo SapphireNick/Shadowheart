@@ -10,8 +10,8 @@ namespace Shadowheart {
  *
  */
 struct t_options {
-  int WINDOW_HEIGHT;
   int WINDOW_WIDTH;
+  int WINDOW_HEIGHT;
   std::string WINDOW_TITLE;
   bool FULLSCREEN;
   bool RESIZABLE;
