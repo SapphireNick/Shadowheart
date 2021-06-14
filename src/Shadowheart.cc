@@ -29,30 +29,28 @@ void start() {
   // This will do for testing
   GLFWwindow* window = glfwCreateWindow(__userwindowopt.WINDOW_WIDTH, __userwindowopt.WINDOW_HEIGHT,
                                         __userwindowopt.WINDOW_TITLE.c_str(), NULL, NULL);
-  #ifdef DEBUG
+#ifdef DEBUG
   if (window == NULL) {
     std::cout << "ERROR::SHADOWHEART::FAILED_TO_CREATE_WINDOW" << std::endl;
     glfwTerminate();
     return;
   }
-  #endif
+#endif
   glfwMakeContextCurrent(window);
 
   // Callback function for resizing
-  auto framebuffer_size_callback = [] (GLFWwindow* window, int width, int height) {
-    glViewport(0, 0, width, height);
-  };
+  auto framebuffer_size_callback = [](GLFWwindow* window, int width, int height) { glViewport(0, 0, width, height); };
   glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-  // Setup glad context
-  #ifdef DEBUG
+// Setup glad context
+#ifdef DEBUG
   if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
     std::cout << "ERROR::SHADOWHEART::FAILED_TO_INITIALIZE_GLAD" << std::endl;
     return;
   }
-  #else
+#else
   gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-  #endif
+#endif
 
   // Set window dimensions for rendering
   // TODO : Create callback-functions for input and resize handling
@@ -73,8 +71,7 @@ void start() {
   return;
 }
 
-void setupScreen(int WINDOW_WIDTH, int WINDOW_HEIGT, std::string WINDOW_TITLE, bool FULLSCREEN,
-                 bool RESIZABLE) {
+void setupScreen(int WINDOW_WIDTH, int WINDOW_HEIGT, std::string WINDOW_TITLE, bool FULLSCREEN, bool RESIZABLE) {
   __userwindowopt = t_options{WINDOW_WIDTH, WINDOW_HEIGT, WINDOW_TITLE, FULLSCREEN, RESIZABLE};
 }
 
